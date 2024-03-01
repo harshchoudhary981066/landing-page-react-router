@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout.jsx'
@@ -7,10 +8,8 @@ import Home from './Components/Home/Home.jsx'
 import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import User from './Components/User/User.jsx'
-import Github, { githubInfoLoader } from './Components/Github/Github.jsx'
+import Github, {githubInfoLoader} from './Components/Github/Github.jsx'
 
-//The below method requires routing of each page defined (like home, about us, contact) for it to recognise that page
-//page, else it would throw and error 404
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -38,8 +37,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
-      <Route path='user/:userid' element={<User />} /> {/*This statement fetches user's data based on 'userid'
-      that is declared in the route */}
+      <Route path='user/:userid' element={<User />} />
       <Route 
       loader={githubInfoLoader}
       path='github' 
