@@ -12,6 +12,8 @@ import Github, {githubInfoLoader} from './Components/Github/Github.jsx'
 
 // const router = createBrowserRouter([
 //   {
+//    This method requires defining path for each of the pages for it to be displayed, else it would throw
+//    404 error
 //     path: '/',
 //     element: <Layout/>,
 //     children: [
